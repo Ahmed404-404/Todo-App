@@ -15,6 +15,7 @@ const TodosContainer = () => {
             <button
                 className='modeButton text-white-2 text-lg hover:text-main-blue transition'
                 onClick={() => setIsDarkMode(!isDarkMode)}
+                aria-label='mode changer'
             >
                 {
                     isDarkMode ? (
