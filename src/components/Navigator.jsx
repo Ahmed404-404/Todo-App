@@ -17,27 +17,31 @@ const Navigator = () => {
                     className={`capitalize ${isDarkMode? "hover:text-white" : "hover:text-black"} transition ${activeTap === "All" && "ActiveTab"}`}
                     onClick={(e) => handelClick(e.target.value)}
                     value={"All"}
-                >
+                    aria-label='All Todos'
+                    >
                         All
                     </button>
                 <button 
                     className={`capitalize ${isDarkMode? "hover:text-white" : "hover:text-black"} transition ${activeTap === "Active" && "ActiveTab"}`}
                     onClick={(e) => handelClick(e.target.value)}
                     value={"Active"}
-                >
+                    aria-label='Active Todos'
+                    >
                         Active
                     </button>
                 <button 
                     className={`capitalize ${isDarkMode? "hover:text-white" : "hover:text-black"} transition ${activeTap === "Compeleted" && "ActiveTab"}`}
                     onClick={(e) => handelClick(e.target.value)}
                     value={"Compeleted"}
-                >
+                    aria-label='Compeleted Todos'
+                    >
                    Completed     
                     </button>
             </div>
             <button 
                 className={` flex-shrink-0 flex-grow first-letter:capitalize hover:${isDarkMode? "text-white" : "text-black"} transition`}
                 onClick={()=>clearCompeleted()}
+                aria-label='Clear Compeleted'
             >clear combleted</button>
         </div>
         )
