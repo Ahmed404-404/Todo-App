@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .v{
+        background-color: #393a4c;
+        background-color: #4d5066;
+        background-color: #777a92;
+        background-color: #57ddff;
+        background-color: #c058f3;
+        background-color: #e4e5f1;
+        background-color: #cacde8;
+        background-color: #484b6a;
+        background-color: #d2d3db;
+        background-color: #9394a5;
+        background-color:  #d2d3db;
+        background-color:  #777a92;
+        background-color:  #4d5066;
+        background-color:  #d2d3db;
+        background-color:  #9394a5;
+        background-color:  #484b6a;
+    }
+}
+@layer components{
+    .darkApp{
+        @apply bg-[#161722] relative before:inset-0 before:absolute before:bg-[url('./assets/imgs/bg-desktop-dark.jpg')] before:bg-no-repeat before:bg-cover before:h-[30vh] before:-z-10
+    }
+    @media (max-width:375px) {
+        .darkApp{
+            @apply before:bg-[url('./assets/imgs/bg-mobile-dark.jpg')] 
+        }
+    }
+    .lightApp{
+        @apply bg-white-1 relative before:inset-0 before:absolute before:bg-[url('./assets/imgs/bg-desktop-light.jpg')] before:bg-no-repeat before:bg-cover before:h-[30vh] before:-z-10
+    }
+    @media (max-width:375px) {
+        .lightApp{
+            @apply before:bg-[url('./assets/imgs/bg-mobile-light.jpg')]
+        }
+    }
+    .modeButton{
+        @apply text-white
+    }
+    .Task{
+        @apply before:inset-0 before:absolute before:bg-second-dark before:rounded-full relative z-0 before:z-10 group-hover:before:inset-[1px] group-hover:before:-translate-x-1/4 before:border before:border-[#cacde8] group-hover:before:border-none transition before:transition before:cursor-pointer cursor-pointer
+    }
+    .ActiveTab {
+        @apply text-main-blue 
+    }
+}
