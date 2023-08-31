@@ -19,6 +19,7 @@ const AddTask = () => {
         <button
           className='border border-[#cacde8] flex-shrink-0 hover:border-[#e4e5f1] transition w-4 h-4 rounded-full '
           onClick={() => handelAdd()}
+          aria-label='add todo'
         >
         </button>
         <input 

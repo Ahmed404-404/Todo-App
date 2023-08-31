@@ -41,6 +41,7 @@ const TasksContainer = () => {
                                     e.preventDefault() 
                                     handelDelete(todo.id)
                                 }}
+                                aria-label='check todo'
                             >
                                 <img src={CrossImage} className='w-[12px] transition scale-0 group-hover:scale-100'/>
                             </button>
